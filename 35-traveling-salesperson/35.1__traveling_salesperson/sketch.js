@@ -32,7 +32,7 @@ function draw() {
     }
     endShape();
 
-
+    // best match
     stroke(255, 0, 255);
     strokeWeight(4);
     noFill();
@@ -54,14 +54,12 @@ function draw() {
 }
 
 function swap(a, i, j) {
-    let temp = a[i];
-    a[i] = a[j];
-    a[j] = temp;
+    [a[i], a[j]] = [a[j], a[i]];
 }
 
 function calcDistance(points) {
     let sum = 0;
-    for (let i = 0; i < points.length-1; i++) {
+    for (let i = 0; i < points.length - 1; i++) {
         let d = dist(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y);
         sum += d;
     }

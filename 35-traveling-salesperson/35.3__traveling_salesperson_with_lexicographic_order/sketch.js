@@ -1,10 +1,7 @@
 let cities = [];
 let totalCities = 5;
 
-let totalPermutations;
-let count = 0;
-
-let order = [];
+let population = []; 
 
 let recordDistance;
 let bestEver;
@@ -14,7 +11,6 @@ function setup() {
     for (let i = 0; i < totalCities; i++) {
         let v = createVector(random(width), random(height / 2));
         cities[i] = v;
-        order[i] = i;
     }
 
     let d = calcDistance(cities, order);
